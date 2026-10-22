@@ -1,293 +1,231 @@
-# README — Nghiên cứu NISAR, GIS và AI/ML cho phân tích môi trường
+# README — Research Exploration: Earth Observation, AI & Environmental Science
 
-**Tên dự án tạm thời:** Nghiên cứu chất lượng dữ liệu radar NISAR và giá trị thông tin của dữ liệu trong mô hình phân tích, dự báo rủi ro môi trường.
-
-**Trạng thái:** Giai đoạn hình thành câu hỏi nghiên cứu và khảo sát tài liệu.
-
-**Lĩnh vực:** Viễn thám radar · GIS · Khoa học dữ liệu · AI/ML · Mô hình toán học · Phân tích không gian–thời gian.
-
-> **Lưu ý:** Đây là đề cương nghiên cứu ban đầu, chưa phải một phương pháp đã được kiểm chứng. Chưa khẳng định tính mới, hiệu quả của NISAR hay khả năng triển khai tất cả các nhánh đề tài.
+> **Trạng thái dự án: OPEN DISCUSSION — CHƯA CHỐT ĐỀ TÀI**
+>
+> Tài liệu này được xây dựng nhằm giúp các thành viên hiểu bối cảnh, chuẩn bị kiến thức, xác định những vấn đề chưa được giải quyết và cùng thảo luận các hướng nghiên cứu tiềm năng.
+>
+> Các hướng được nêu ra chỉ là giả thuyết và gợi ý ban đầu. Chưa có quyết định cuối cùng về bài toán, phương pháp, dữ liệu hoặc sản phẩm nghiên cứu.
 
 ---
 
-## 1. Tổng quan dự án
+## 1. Mục đích của giai đoạn hiện tại
 
-Dự án nghiên cứu cách sử dụng dữ liệu radar vệ tinh NISAR kết hợp với dữ liệu địa không gian và phương pháp thống kê, học máy để giải quyết các bài toán môi trường.
+Chúng ta đang tìm kiếm một vấn đề khoa học hoặc kỹ thuật đủ quan trọng để phát triển thành một dự án nghiên cứu có thể kiểm chứng.
 
-Thay vì chỉ xây dựng bản đồ hoặc triển khai một thuật toán AI, dự án tập trung vào ba vấn đề nền tảng:
+Dữ liệu viễn thám, NISAR, GIS, AI/ML và mô hình toán học là những công cụ tiềm năng, không phải mục tiêu bắt buộc của dự án.
 
-1. **Chất lượng dữ liệu:** Dữ liệu vệ tinh sau các bước xử lý còn những nguồn sai số và giới hạn nào?
-2. **Giá trị thông tin:** Dữ liệu NISAR có cung cấp thông tin hữu ích bổ sung cho các mô hình phân tích hoặc dự báo môi trường hay không?
-3. **Độ tin cậy khoa học:** Làm thế nào để chứng minh kết quả có khả năng tổng quát hóa, định lượng được bất định và được kiểm chứng bằng dữ liệu độc lập?
+Nhóm cần tìm hiểu:
 
-Hai ứng dụng ban đầu được xem xét là dự báo nguy cơ cháy rừng và phân tích hạn–mặn. Tuy nhiên, đây là những bài toán khác nhau về cơ chế vật lý, dữ liệu tham chiếu và phương pháp đánh giá. Chúng không mặc định thuộc cùng một đề tài.
+- Những vấn đề thực tế hoặc khoa học nào vẫn còn khó giải quyết?
+- Các phương pháp hiện có đang gặp hạn chế gì?
+- Có thể phát triển một mô hình, phương pháp đánh giá hoặc quy trình kỹ thuật để khắc phục những hạn chế đó không?
+- Có dữ liệu đủ tốt để kiểm chứng giả thuyết không?
+- Đóng góp tiềm năng có thể là gì: một phát hiện khoa học, mô hình toán học, thuật toán, phương pháp kiểm định hay hệ thống kỹ thuật?
+- Làm thế nào để chứng minh kết quả có giá trị thay vì chỉ tạo ra một sản phẩm trực quan?
 
-## 2. Bối cảnh và cơ sở khoa học
+**Mục tiêu của giai đoạn này không phải hoàn thành một mô hình. Mục tiêu là tìm được vấn đề đáng giải quyết và hiểu đủ sâu để quyết định có nên theo đuổi nó hay không.**
 
-NISAR (*NASA–ISRO Synthetic Aperture Radar*) là sứ mệnh vệ tinh radar hợp tác giữa NASA và ISRO. Hệ thống sử dụng radar băng tần L và S để quan sát những thay đổi của bề mặt Trái Đất và các đặc tính liên quan đến đất, thảm thực vật, băng và những hệ thống tự nhiên khác.
+## 2. Ý tưởng xuất phát
 
-Nguồn thông tin chính thức:
+Một ý tưởng ban đầu được đưa ra để thảo luận:
+
+Kết hợp dữ liệu vệ tinh NISAR, GIS và các phương pháp AI/ML; nghiên cứu quy trình xử lý, đánh giá chất lượng dữ liệu raster và xem xét khả năng ứng dụng trong dự báo nguy cơ cháy rừng hoặc phân tích hạn–mặn, có kiểm định dữ liệu và mô hình.
+
+Ý tưởng này chưa được xem là đề tài chính thức. Nó đang được dùng làm điểm xuất phát để tìm ra các câu hỏi nghiên cứu có chiều sâu hơn.
+
+Một số vấn đề cần phản biện:
+
+1. Cháy rừng và hạn–mặn có nên được kết hợp hay phải nghiên cứu riêng?
+2. Chất lượng dữ liệu vệ tinh ảnh hưởng thế nào đến kết quả phân tích?
+3. NISAR có cung cấp thông tin bổ sung mà các nguồn dữ liệu khác chưa cung cấp tốt không?
+4. Việc xử lý raster hiện nay còn hạn chế nào đáng nghiên cứu?
+5. Có thể nghiên cứu độ bất định, khả năng tổng quát hóa hoặc giới hạn suy luận thay vì chỉ tối ưu độ chính xác không?
+6. Có những vấn đề khoa học nào đáng quan tâm hơn nhưng nhóm chưa nhận diện được?
+
+Nhóm được khuyến khích đề xuất cả những hướng không sử dụng NISAR, GIS hoặc AI nếu chúng có giá trị khoa học và tính khả thi cao hơn.
+
+## 3. Những hướng vấn đề đang mở
+
+Các hướng sau không phải danh sách lựa chọn cuối cùng. Chúng là những nhóm câu hỏi để thành viên tìm hiểu và phản biện.
+
+### Hướng A — Chất lượng và độ tin cậy của dữ liệu
+
+- Dữ liệu sau xử lý có thể còn những loại sai số nào?
+- Có thể định lượng chất lượng dữ liệu thay vì chỉ đánh dấu dữ liệu hợp lệ hoặc không hợp lệ không?
+- Những sai số nào ảnh hưởng đáng kể đến kết quả của mô hình?
+- Có thể phát hiện trước khi chạy mô hình rằng dữ liệu không đủ tin cậy cho một nhiệm vụ cụ thể không?
+- Các tiêu chí chất lượng nên được thiết kế chung hay riêng cho từng bài toán?
+
+### Hướng B — Giá trị thông tin của dữ liệu vệ tinh
+
+- Một nguồn dữ liệu mới có thực sự cải thiện kết quả so với mô hình cơ sở không?
+- Dữ liệu radar cung cấp thông tin gì khác với ảnh quang học, thời tiết hoặc địa hình?
+- Khi nào việc kết hợp nhiều nguồn dữ liệu tạo ra giá trị, và khi nào chỉ làm tăng độ phức tạp?
+- Có thể xác định điều kiện mà một nguồn dữ liệu không còn hữu ích không?
+
+### Hướng C — Mô hình toán học và phương pháp suy luận
+
+- Có thể biểu diễn mối quan hệ giữa chất lượng dữ liệu, sai số và độ tin cậy đầu ra bằng một mô hình toán học không?
+- Có thể định lượng bất định thay vì chỉ đưa ra một giá trị dự báo không?
+- Có thể xây dựng tiêu chí xác định khi nào mô hình nên đưa ra kết quả, cảnh báo hoặc từ chối dự báo không?
+- Những giả định nào của các mô hình hiện tại chưa được kiểm chứng đầy đủ?
+
+### Hướng D — Khả năng tổng quát hóa
+
+- Mô hình có hoạt động tốt ở khu vực hoặc thời gian chưa từng được sử dụng trong huấn luyện không?
+- Kết quả có phụ thuộc quá nhiều vào một địa điểm, mùa vụ hoặc loại thảm phủ không?
+- Có thể phân biệt sự cải thiện thực sự với kết quả tốt do cách chia dữ liệu thuận lợi không?
+- Làm thế nào để đánh giá mô hình trong điều kiện dữ liệu khác với dữ liệu huấn luyện?
+
+### Hướng E — Các bài toán môi trường
+
+Các ứng dụng ban đầu có thể gồm:
+
+- Dự báo nguy cơ cháy rừng.
+- Phân tích hạn và thiếu nước.
+- Ước lượng hoặc lập bản đồ độ mặn.
+- Theo dõi biến đổi bề mặt và thảm thực vật.
+- Phân tích độ ẩm đất hoặc các trạng thái môi trường khác.
+
+Nhóm không cần chọn ngay một ứng dụng. Mỗi ứng dụng phải được đánh giá dựa trên cơ chế khoa học, dữ liệu tham chiếu, khả năng kiểm định và ý nghĩa thực tiễn.
+
+### Hướng F — Những vấn đề chưa được nhận diện
+
+Đây là phần mở hoàn toàn.
+
+Thành viên có thể đề xuất vấn đề từ các ngành khác như vật lý, thống kê, tối ưu hóa, khoa học hệ thống, xử lý tín hiệu, mô hình hóa bất định hoặc các lĩnh vực liên quan.
+
+Không nên giới hạn ý tưởng chỉ vì chúng không nằm trong phạm vi của một công cụ hoặc công nghệ quen thuộc.
+
+## 4. Kiến thức thành viên nên chuẩn bị
+
+Không yêu cầu mọi thành viên phải thành thạo tất cả các lĩnh vực. Mục tiêu là tạo nền tảng chung để nhóm có thể đọc tài liệu và phản biện cùng nhau.
+
+| Lĩnh vực | Kiến thức cần tìm hiểu | Mục đích |
+|---|---|---|
+| Phương pháp nghiên cứu khoa học | Câu hỏi nghiên cứu, giả thuyết, đối chứng, khả năng bác bỏ giả thuyết | Phân biệt ý tưởng hấp dẫn với nghiên cứu có thể kiểm chứng |
+| Viễn thám | Ảnh quang học, SAR, độ phân giải, góc quan sát, tán xạ radar | Hiểu dữ liệu thực sự đo được gì |
+| NISAR | Cấu trúc sản phẩm, cấp xử lý, metadata, chất lượng và giới hạn dữ liệu | Xác định dữ liệu phù hợp với bài toán nào |
+| GIS và dữ liệu raster | Hệ tọa độ, phép chiếu, độ phân giải, ghép lớp, dữ liệu thiếu | Tránh sai lệch khi kết hợp dữ liệu không gian |
+| Toán học và thống kê | Xác suất, hồi quy, sai số, bất định, tương quan, kiểm định giả thuyết | Xây dựng và đánh giá mô hình có cơ sở |
+| AI/ML | Huấn luyện, kiểm định, overfitting, baseline, leakage, class imbalance | Đánh giá công bằng hiệu quả của mô hình |
+| Validation và calibration | Kiểm định dữ liệu, kiểm định mô hình, hiệu chuẩn xác suất | Đánh giá chất lượng và độ tin cậy đúng cách |
+| Khoa học môi trường | Cơ chế cháy, hạn, độ mặn, độ ẩm và thảm thực vật | Tránh suy luận sai từ dữ liệu quan sát |
+| Lập trình và quản lý dữ liệu | Python, xử lý dữ liệu, Git, tài liệu hóa thí nghiệm | Tạo quy trình tái lập và làm việc nhóm |
+
+## 5. Tài liệu nền tảng để bắt đầu
+
+Ưu tiên tài liệu chính thức và các bài báo khoa học có phương pháp, dữ liệu và kết quả kiểm chứng rõ ràng.
+
+### Nguồn dữ liệu và viễn thám
 
 - NASA NISAR Mission: https://science.nasa.gov/mission/nisar/
-- NISAR Data: https://science.nasa.gov/mission/nisar/data/
+- NASA NISAR Data: https://science.nasa.gov/mission/nisar/data/
 - NISAR Products Overview: https://nisar-docs.asf.alaska.edu/products-overview/
 - NISAR Calibration and Validation: https://science.nasa.gov/mission/nisar/calibration-and-validation/
-- NISAR Data User Guide: https://nisar-docs.asf.alaska.edu/
+- NASA FIRMS — Active Fire Data: https://firms.modaps.eosdis.nasa.gov/
 
-Dữ liệu radar có đặc điểm khác với ảnh quang học. Tín hiệu radar chịu ảnh hưởng bởi cấu trúc bề mặt, độ ẩm, thảm phủ, hình học quan sát và các yếu tố khác. Vì vậy, không thể mặc định rằng một đặc trưng radar đơn lẻ tương đương trực tiếp với một đại lượng môi trường cụ thể.
+### Tìm kiếm tài liệu khoa học
 
-Đặc biệt, cần phân biệt:
+- NASA ADS: https://ui.adsabs.harvard.edu/
+- Google Scholar: https://scholar.google.com/
+- Crossref: https://search.crossref.org/
+- IEEE Xplore: https://ieeexplore.ieee.org/
+- ScienceDirect: https://www.sciencedirect.com/
+- Springer Nature: https://link.springer.com/
 
-- Dữ liệu đã hiệu chuẩn với dữ liệu đã được kiểm định đầy đủ cho mọi mục đích sử dụng.
-- Raster có cấu trúc kỹ thuật hợp lệ với dữ liệu có chất lượng đo lường tốt.
-- Phát hiện điểm nóng đang diễn ra với dự báo nguy cơ cháy trong tương lai.
-- Chỉ báo hạn với phép đo độ mặn.
-- Độ chính xác phân loại với độ tin cậy của xác suất dự báo.
+Các từ khóa ban đầu có thể gồm:
 
-## 3. Vấn đề nghiên cứu tổng quát
+- `NISAR data quality assessment`
+- `SAR uncertainty propagation`
+- `remote sensing model validation`
+- `wildfire risk prediction spatial temporal validation`
+- `soil salinity remote sensing field validation`
+- `task-aware geospatial data quality`
+- `probabilistic calibration environmental prediction`
+- `remote sensing domain generalization`
 
-Vấn đề cốt lõi không phải là liệu có thể kết hợp NISAR, GIS và AI hay không, mà là:
+Đây là từ khóa để khảo sát, không phải khẳng định rằng các hướng này đều có khoảng trống nghiên cứu.
 
-**Chất lượng và đặc tính của dữ liệu radar ảnh hưởng như thế nào đến khả năng suy luận về các trạng thái môi trường, và làm thế nào xác định được giá trị thông tin bổ sung của dữ liệu đó bằng thực nghiệm độc lập?**
+## 6. Cách đọc và phản biện một bài báo
 
-Câu hỏi này có thể được triển khai thành nhiều hướng nghiên cứu riêng. Mỗi hướng cần xác định đại lượng cần nghiên cứu, giả thuyết, dữ liệu tham chiếu và tiêu chí kiểm chứng trước khi lựa chọn thuật toán.
+Mỗi thành viên khi đọc tài liệu nên ghi lại:
 
-## 4. Các nhánh nghiên cứu tiềm năng
+1. **Vấn đề:** Bài báo đang giải quyết câu hỏi nào?
+2. **Động cơ:** Vì sao vấn đề đó quan trọng?
+3. **Phương pháp hiện có:** Những cách tiếp cận nào đã được sử dụng?
+4. **Hạn chế:** Tác giả đã chỉ ra những giới hạn nào?
+5. **Dữ liệu:** Dữ liệu có đại diện cho bài toán và điều kiện thực tế không?
+6. **Thiết kế kiểm chứng:** Có baseline, dữ liệu độc lập và kiểm định phù hợp không?
+7. **Kết quả:** Kết quả chứng minh được điều gì, và không chứng minh được điều gì?
+8. **Câu hỏi tiếp theo:** Có giả thuyết nào có thể kiểm tra dựa trên những giới hạn đó?
 
-### Hướng A — Giá trị bổ sung của NISAR trong dự báo nguy cơ cháy rừng
+Không nên xem phần “future work” của một bài báo là bằng chứng đầy đủ về tính mới. Cần tìm các công trình liên quan để kiểm tra liệu vấn đề đó đã được giải quyết ở nơi khác hay chưa.
 
-**Câu hỏi nghiên cứu**
+## 7. Nguyên tắc thảo luận trong nhóm
 
-Việc bổ sung các đặc trưng radar NISAR có cải thiện chất lượng dự báo nguy cơ cháy rừng so với mô hình cơ sở không sử dụng NISAR hay không?
+- Không mặc định ý tưởng ban đầu là đúng.
+- Không lựa chọn thuật toán trước khi xác định bài toán.
+- Không xem việc sử dụng AI hoặc dữ liệu vệ tinh là đóng góp khoa học tự thân.
+- Phân biệt sự kiện quan sát, giả thuyết và kết luận.
+- Đề xuất mới phải đi kèm lý do, điều kiện khả thi và cách kiểm chứng.
+- Ưu tiên phản biện bằng tài liệu, dữ liệu và thí nghiệm hơn là trực giác.
+- Không loại bỏ một hướng chỉ vì nó chưa sử dụng công nghệ mà thành viên quen thuộc.
+- Chấp nhận kết quả âm nếu nó được thiết kế và kiểm chứng khoa học.
 
-**Giả thuyết cần kiểm chứng**
+## 8. Đầu ra mong muốn của giai đoạn thảo luận
 
-NISAR có thể cung cấp thông tin bổ sung về trạng thái bề mặt hoặc thảm thực vật trong một số điều kiện. Tuy nhiên, mức cải thiện thực tế chưa được xác định và có thể thay đổi theo hệ sinh thái, thời gian, chất lượng dữ liệu và cách xây dựng mô hình.
+Giai đoạn này chưa yêu cầu sản phẩm AI hoàn chỉnh, bản đồ cuối cùng hoặc bài báo hoàn thiện.
 
-**Luồng nghiên cứu**
+Các đầu ra mong muốn gồm:
 
-1. Xác định khu vực, thời hạn dự báo và định nghĩa sự kiện cháy.
-2. Thu thập dữ liệu sự kiện cháy, thời tiết, thảm thực vật, địa hình và NISAR.
-3. Xây dựng mô hình cơ sở không sử dụng NISAR.
-4. Xây dựng mô hình mở rộng có thêm các đặc trưng NISAR.
-5. Kiểm định trên các vùng hoặc thời kỳ độc lập.
-6. Đánh giá mức cải thiện, độ tin cậy xác suất và giới hạn chuyển giao.
+- Danh sách các vấn đề khoa học và kỹ thuật đáng quan tâm.
+- Bộ tài liệu nền tảng có ghi chú và nguồn kiểm chứng.
+- Bảng tổng hợp các phương pháp hiện có và hạn chế của chúng.
+- Các giả thuyết nghiên cứu ứng viên.
+- Đánh giá sơ bộ về dữ liệu, tính khả thi và nguồn lực.
+- Danh sách các câu hỏi còn chưa được giải đáp.
+- Một quyết định có căn cứ về việc tiếp tục, thu hẹp, kết hợp hay loại bỏ từng hướng.
 
-**Dữ liệu tham chiếu tiềm năng**
+## 9. Tiêu chí để một ý tưởng được xem xét phát triển
 
-NASA FIRMS cung cấp dữ liệu điểm nóng và bất thường nhiệt từ MODIS/VIIRS: https://firms.modaps.eosdis.nasa.gov/
+Một hướng nghiên cứu nên được đánh giá qua các câu hỏi:
 
-Điểm nóng vệ tinh chỉ là dữ liệu quan sát tham chiếu có giới hạn, không phải nhãn hoàn hảo cho mọi sự kiện cháy. Cần cân nhắc bỏ sót do mây, sai lệch thời gian quan sát và độ phân giải không gian.
+- Vấn đề có ý nghĩa khoa học hoặc thực tiễn rõ ràng không?
+- Có thể diễn đạt thành một câu hỏi nghiên cứu cụ thể không?
+- Có cơ sở để cho rằng phương pháp hiện tại còn hạn chế không?
+- Có thể thu thập dữ liệu phù hợp để kiểm chứng không?
+- Có baseline hoặc phương pháp đối chứng hợp lý không?
+- Có thể đánh giá bằng dữ liệu độc lập không?
+- Đóng góp tiềm năng có khác biệt đáng kể với các nghiên cứu trước không?
+- Nhóm có đủ thời gian, kiến thức và nguồn lực để thực hiện không?
 
-**Đóng góp tiềm năng**
+Chưa cần chấm điểm hoặc xếp hạng các hướng ngay. Trước hết, nhóm cần thống nhất cách hiểu các tiêu chí này.
 
-Định lượng được khi nào NISAR có giá trị dự báo bổ sung, thay vì chỉ chứng minh một mô hình AI có thể tạo ra bản đồ nguy cơ.
+## 10. Trạng thái hiện tại và bước tiếp theo
 
-### Hướng B — Ảnh hưởng của chất lượng dữ liệu radar đến độ tin cậy của mô hình
+**Trạng thái hiện tại:**
 
-**Câu hỏi nghiên cứu**
+- Chưa chốt đề tài.
+- Chưa chọn thuật toán hoặc mô hình toán học.
+- Chưa xác định NISAR là nguồn dữ liệu bắt buộc.
+- Chưa quyết định cháy rừng và hạn–mặn sẽ kết hợp hay tách riêng.
+- Chưa khẳng định tính mới hoặc hiệu quả của bất kỳ phương pháp nào.
 
-Các nguồn sai số và giới hạn chất lượng dữ liệu radar làm thay đổi đầu ra của mô hình môi trường như thế nào?
+**Bước tiếp theo:**
 
-**Luồng nghiên cứu**
-
-1. Xác định sản phẩm NISAR và cấp xử lý được sử dụng.
-2. Xác định các nguồn sai số có liên quan đến sản phẩm và bài toán.
-3. Xây dựng chỉ số hoặc tiêu chí đánh giá chất lượng.
-4. Đo độ nhạy của mô hình đối với các điều kiện chất lượng khác nhau.
-5. Kiểm chứng mối quan hệ giữa chỉ số chất lượng đầu vào và sai số đầu ra.
-6. Xác định điều kiện sử dụng đáng tin cậy và những giới hạn cần cảnh báo.
-
-**Mô hình khái niệm**
-
-\[
-\Delta Q=f(q_1,q_2,\ldots,q_k)
-\]
-
-Trong đó \(q_i\) là các chỉ số chất lượng đầu vào được định nghĩa cụ thể và \(\Delta Q\) là thay đổi chất lượng của kết quả mô hình.
-
-Đây chỉ là cách biểu diễn giả thuyết ban đầu. Dạng hàm, các biến cần sử dụng và quan hệ thực nghiệm phải được xác định qua khảo sát tài liệu và dữ liệu.
-
-**Đóng góp tiềm năng**
-
-Xây dựng được phương pháp định lượng ảnh hưởng của chất lượng dữ liệu đến kết quả suy luận, hoặc xác định được điều kiện mà mô hình không còn đáng tin cậy.
-
-### Hướng C — Đánh giá chất lượng raster theo nhiệm vụ phân tích
-
-**Câu hỏi nghiên cứu**
-
-Có thể xây dựng một quy trình đánh giá dữ liệu địa không gian dựa trên yêu cầu của bài toán, thay vì chỉ kiểm tra định dạng và hệ tọa độ, hay không?
-
-**Luồng nghiên cứu**
-
-1. Xác định yêu cầu đầu vào của bài toán.
-2. Kiểm tra hệ tọa độ, độ phân giải, vùng phủ, thời gian và dữ liệu thiếu.
-3. Đánh giá những đặc tính chất lượng có ý nghĩa đối với sản phẩm radar.
-4. Tạo báo cáo chất lượng cho từng lớp dữ liệu.
-5. Kiểm tra xem các cảnh báo chất lượng có liên hệ với sai số của mô hình hay không.
-
-**Đóng góp tiềm năng**
-
-Phát triển quy trình đánh giá chất lượng dữ liệu có tính đến mục tiêu sử dụng (*task-aware data quality assessment*).
-
-Việc ghép nối các công cụ GIS có sẵn chưa đủ để tạo ra đóng góp khoa học. Cần xác định tiêu chí mới, cơ chế ra quyết định hoặc bằng chứng thực nghiệm chứng minh lợi ích.
-
-### Hướng D — Lập bản đồ hạn hoặc độ mặn có định lượng bất định
-
-**Câu hỏi nghiên cứu**
-
-Có thể ước lượng một đại lượng hạn hoặc độ mặn cụ thể từ dữ liệu viễn thám với độ tin cậy được định lượng và kiểm chứng độc lập hay không?
-
-Trước khi lựa chọn mô hình, phải xác định rõ đại lượng đích:
-
-- Hạn khí tượng.
-- Hạn nông nghiệp hoặc độ ẩm đất.
-- Độ mặn đất.
-- Độ mặn nước hoặc xâm nhập mặn.
-- Tổ hợp hạn–mặn được định nghĩa bằng các tiêu chí đo lường rõ ràng.
-
-**Luồng nghiên cứu**
-
-1. Chọn đại lượng đích và thang đo.
-2. Thu thập dữ liệu quan trắc hoặc đo đạc tham chiếu phù hợp.
-3. Xác định những biến viễn thám có cơ sở vật lý.
-4. Xây dựng mô hình cơ sở và mô hình mở rộng có NISAR nếu phù hợp.
-5. Kiểm định trên mẫu độc lập.
-6. Đánh giá sai số, độ bất định và điều kiện áp dụng.
-
-**Đóng góp tiềm năng**
-
-Không chỉ tạo bản đồ mà còn xác định được điều kiện mà dữ liệu đủ thông tin để ước lượng đại lượng cần nghiên cứu, cùng những trường hợp mà kết quả chưa đáng tin cậy.
-
-## 5. Có nên kết hợp các nhánh thành một đề tài?
-
-Các nhánh có thể dùng chung hạ tầng dữ liệu, nhưng không nhất thiết phải ghép thành một bài toán khoa học duy nhất.
-
-Cấu trúc hợp lý ban đầu:
-
-- **Nền tảng dữ liệu:** Hướng B và Hướng C.
-- **Ứng dụng dự báo cháy:** Hướng A, có thể kết hợp một phần Hướng B.
-- **Ứng dụng hạn hoặc độ mặn:** Hướng D, có thể sử dụng quy trình chất lượng dữ liệu chung.
-
-Chỉ nên kết hợp hai ứng dụng khi có một câu hỏi khoa học chung, dữ liệu đủ tương thích và một thiết kế thí nghiệm có thể kiểm chứng lợi ích của việc tích hợp.
-
-## 6. Quy trình nghiên cứu tổng quát
-
-### Giai đoạn 1 — Khảo sát tài liệu
-
-- Đọc tài liệu chính thức của NASA/ISRO và hướng dẫn sản phẩm NISAR.
-- Đọc các nghiên cứu về bài toán môi trường đã chọn.
-- Xác định các phương pháp hiện có, cách kiểm định và hạn chế đã được công bố.
-- Lập bảng so sánh các công trình gần nhất.
-
-### Giai đoạn 2 — Đánh giá khả thi dữ liệu
-
-- Xác định khu vực và thời kỳ nghiên cứu.
-- Kiểm tra độ phủ, tần suất quan sát và loại sản phẩm NISAR.
-- Tìm dữ liệu tham chiếu độc lập.
-- Kiểm tra tính tương thích về không gian, thời gian và đại lượng đo.
-
-### Giai đoạn 3 — Xây dựng quy trình dữ liệu
-
-- Kiểm tra metadata và tính hợp lệ của dữ liệu.
-- Thực hiện các bước tiền xử lý phù hợp với sản phẩm.
-- Đánh giá dữ liệu thiếu, sai số và các giới hạn chất lượng.
-- Tạo các đặc trưng đầu vào có cơ sở khoa học.
-
-### Giai đoạn 4 — Xây dựng mô hình và đối chứng
-
-- Xây dựng mô hình cơ sở.
-- Xây dựng mô hình mở rộng với dữ liệu hoặc phương pháp đề xuất.
-- Giữ nguyên nguyên tắc so sánh công bằng giữa các mô hình.
-- Kiểm tra độ nhạy và tránh rò rỉ dữ liệu.
-
-### Giai đoạn 5 — Kiểm định độc lập
-
-- Chia dữ liệu theo không gian và/hoặc thời gian phù hợp với mục tiêu.
-- Sử dụng nhiều chỉ số đánh giá, không dựa vào một chỉ số duy nhất.
-- Đánh giá hiệu chuẩn xác suất khi đầu ra là xác suất.
-- Định lượng bất định và xác định giới hạn áp dụng.
-
-### Giai đoạn 6 — Xác định đóng góp
-
-- Đối chiếu kết quả với các phương pháp trước đó.
-- Xác định giả thuyết nào được hỗ trợ và giả thuyết nào bị bác bỏ.
-- Báo cáo trường hợp mô hình không cải thiện hoặc không đủ dữ liệu.
-- Xác định kết quả có thể phát triển thành bài báo, mô hình toán học hoặc công cụ kỹ thuật.
-
-## 7. Phân biệt calibration và validation
-
-| Khái niệm | Mục tiêu |
-|---|---|
-| Hiệu chuẩn dữ liệu radar | Đưa tín hiệu về thang đo hoặc đặc tính đo lường theo quy trình sản phẩm |
-| Kiểm định sản phẩm | Đánh giá chất lượng dữ liệu bằng các phép đo hoặc nguồn tham chiếu phù hợp |
-| Kiểm định mô hình | Đánh giá khả năng dự báo hoặc ước lượng trên dữ liệu độc lập |
-| Hiệu chuẩn xác suất | Đánh giá mức độ phù hợp giữa xác suất dự báo và tần suất sự kiện quan sát |
-
-Các bước này không thay thế cho nhau. Một sản phẩm đã hiệu chuẩn không đồng nghĩa mô hình sử dụng sản phẩm đó đã được kiểm định; một mô hình có độ chính xác cao cũng không mặc nhiên có xác suất dự báo đáng tin cậy.
-
-## 8. Tiêu chí đánh giá kết quả nghiên cứu
-
-Dự án không nên được đánh giá chỉ dựa trên việc tạo được bản đồ hoặc đạt một chỉ số AI cao.
-
-Các tiêu chí cần xem xét:
-
-- Tính hợp lệ về vật lý của các biến đầu vào.
-- Chất lượng và tính độc lập của dữ liệu tham chiếu.
-- Hiệu quả so với mô hình cơ sở.
-- Khả năng tổng quát hóa theo không gian và thời gian.
-- Độ tin cậy xác suất và mức độ bất định.
-- Khả năng tái lập thí nghiệm.
-- Mức độ rõ ràng của đóng góp so với các công trình trước.
-
-## 9. Rủi ro và giới hạn
-
-1. Dữ liệu NISAR có thể không đủ độ phủ hoặc tần suất quan sát cho thời hạn dự báo mong muốn.
-2. Dữ liệu điểm nóng có thể không đại diện đầy đủ cho toàn bộ sự kiện cháy.
-3. Độ mặn không thể được suy ra trực tiếp từ mọi đặc trưng radar.
-4. Dữ liệu tham chiếu có thể không đồng nhất về thời gian, không gian hoặc phương pháp đo.
-5. Mô hình có thể đạt kết quả tốt do rò rỉ dữ liệu hoặc tương quan không gian.
-6. Một cải thiện thống kê không tự động chứng minh cơ chế nhân quả.
-7. Tính mới chỉ có thể được đánh giá sau khi khảo sát có hệ thống các công trình gần nhất.
-
-## 10. Lộ trình đề xuất
-
-**Bước 1:** Khảo sát tài liệu và xây dựng bảng so sánh các nghiên cứu hiện có.
-
-**Bước 2:** Kiểm tra dữ liệu NISAR thực tế và các nguồn dữ liệu tham chiếu.
-
-**Bước 3:** Chọn một bài toán có thể kiểm chứng, một khu vực và một khoảng thời gian cụ thể.
-
-**Bước 4:** Viết câu hỏi nghiên cứu, giả thuyết, tiêu chí bác bỏ và thiết kế thí nghiệm.
-
-**Bước 5:** Chỉ sau khi xác nhận tính khả thi mới lựa chọn thuật toán, mô hình toán học và cấu trúc hệ thống.
-
-## 11. Tiêu chí để quyết định có tiếp tục hay không
-
-Nên tiếp tục khi có thể trả lời thỏa đáng các câu hỏi sau:
-
-- Bài toán có ý nghĩa khoa học hoặc thực tiễn rõ ràng không?
-- Có dữ liệu đủ chất lượng để kiểm chứng giả thuyết không?
-- Có mô hình cơ sở hợp lý để so sánh không?
-- Có thiết kế kiểm định độc lập để tránh kết quả quá lạc quan không?
-- Có khả năng xác định chính xác đóng góp so với nghiên cứu trước không?
-
-Nếu chưa đáp ứng các điều kiện trên, cần thu hẹp hoặc đổi hướng trước khi đầu tư vào một mô hình phức tạp.
+1. Các thành viên đọc tài liệu nền tảng.
+2. Mỗi người đề xuất những vấn đề mình cho là quan trọng, kèm nguồn và lập luận.
+3. Cùng phân biệt vấn đề đã được giải quyết, vấn đề còn tranh luận và vấn đề chưa đủ bằng chứng.
+4. Xây dựng danh sách giả thuyết nghiên cứu ứng viên.
+5. Chỉ sau đó mới đánh giá tính mới, khả năng kiểm chứng và quyết định hướng phát triển.
 
 ---
 
-## 12. Kết luận
+## Tuyên bố định hướng
 
-Dự án hiện nên được xem là một chương trình khảo sát gồm nhiều nhánh nghiên cứu tiềm năng, không phải một mô hình AI hoàn chỉnh.
+Dự án bắt đầu bằng việc tìm hiểu một vấn đề, không bắt đầu bằng việc chọn một công nghệ.
 
-Ba hướng cần ưu tiên khảo sát là:
+Chúng ta chưa cần biết trước kết quả cuối cùng sẽ là một bài báo, mô hình toán học, thuật toán, quy trình kỹ thuật hay một hệ thống ứng dụng. Những hình thức đó sẽ được quyết định sau khi hiểu rõ vấn đề và xác định được loại đóng góp phù hợp.
 
-1. Giá trị thông tin bổ sung của NISAR trong một bài toán môi trường cụ thể.
-2. Ảnh hưởng của chất lượng dữ liệu radar đến sai số và độ tin cậy của mô hình.
-3. Phương pháp đánh giá chất lượng dữ liệu địa không gian dựa trên nhiệm vụ sử dụng.
-
-Hạn–mặn nên được phát triển thành một nhánh riêng nếu chưa có giả thuyết chung đủ mạnh để liên kết với dự báo cháy rừng.
-
-**Nguyên tắc xuyên suốt:** Không mặc định công nghệ tạo ra giá trị khoa học. Giá trị phải được chứng minh thông qua câu hỏi rõ ràng, đối chứng hợp lý, dữ liệu tham chiếu đáng tin cậy và kết quả kiểm định độc lập.
-
-**Trạng thái hiện tại:** Chưa chọn đề tài cuối cùng; chưa khẳng định tính mới; chưa xác nhận tính khả thi của toàn bộ dữ liệu; chưa có kết quả thực nghiệm.
+**Mục tiêu chung là tìm ra một câu hỏi đáng nghiên cứu, hiểu những gì đã được biết, nhận diện điều còn chưa rõ và xây dựng cách kiểm chứng đủ chặt chẽ để tạo ra tri thức mới.**
